@@ -192,9 +192,9 @@ async function savePNG() {
 
         // データベースに登録（15匹を超えたら最古の魚と入れ替え）
         const { error: rpcError } = await supabaseClient
-            .rpc("add_animal", {
-                p_image_path: imagePath
-            });
+            .rpc("add_spacecraft", {
+    p_image_path: imagePath
+});
 
         if (rpcError) throw rpcError;
 
