@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>きょうりゅうでざいん</title>
+<title>うちゅうでざいん</title>
 
 <style>
 body {
@@ -38,7 +38,7 @@ button {
 
 <body>
 
-<h1>きょうりゅうでざいん</h1>
+<h1>うちゅうでざいん</h1>
 
 <div>
 <button class="color" style="background:black"
@@ -75,7 +75,7 @@ onclick="setColor('purple')"></button>
 
 <button onclick="clearCanvas()">ぜんぶけす</button>
 <button id="uploadButton" onclick="savePNG()">
-きょうりゅうえんにいれる
+うちゅうにとびたつ
 </button>
 
 <p id="status" aria-live="polite"></p>
@@ -163,7 +163,7 @@ async function savePNG() {
     }
 
     uploadButton.disabled = true;
-    status.textContent = "きょうりゅうえんに入れているよ……";
+    status.textContent = "うちゅうにとびたっているよ……";
 
     try {
         // 描いた絵を透明PNGに変換
@@ -176,13 +176,13 @@ async function savePNG() {
 
         // 同じ名前にならないようにする
         const imagePath =
-            "animal-" + Date.now() + "-" +
+            "Spaceship-" + Date.now() + "-" +
             Math.random().toString(36).slice(2) + ".png";
 
         // Storageへアップロード
         const { error: uploadError } = await supabaseClient
             .storage
-            .from("animal-images")
+            .from("Spaceship-images")
             .upload(imagePath, blob, {
                 contentType: "image/png",
                 upsert: false
