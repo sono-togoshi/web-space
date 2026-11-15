@@ -10,18 +10,20 @@
 
 <style>
 
+
 /* 10の施設への共通ショートカット */
 #siteNav {
     position: fixed;
     left: 10%;
     bottom: 0;
-    width: 65%;
+    width: 70%;
     z-index: 1000;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 2px;
     padding: 3px;
-    background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.95);
     box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
 }
 
@@ -47,6 +49,55 @@
         grid-template-columns: repeat(5, 1fr);
     }
 }
+
+/* 宇宙の表示画面 */
+#aquarium {
+    position: relative;
+    width: min(100%, 1000px);
+    aspect-ratio: 2 / 1;
+    margin: 20px auto;
+    background-image: url("background/space-background.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* 宇宙船 */
+.fish {
+    position: absolute;
+    height: auto;
+}
+
+/* 泡 */
+.bubble {
+    position: absolute;
+    bottom: 0;
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 50%;
+    animation: bubbleUp 6s linear forwards;
+}
+
+@keyframes bubbleUp {
+    from {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+}
+
+#drawButton {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+}
+
 
 
 </style>
