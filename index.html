@@ -10,15 +10,15 @@
 
 <style>
 
-/* 9つの施設への共通ショートカット */
+/* 10の施設への共通ショートカット */
 #siteNav {
     position: fixed;
     left: 10%;
     bottom: 0;
-    width: 60%;
+    width: 65%;
     z-index: 1000;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 2px;
     padding: 3px;
     background: rgba(255, 255, 255, 0.95);
@@ -47,77 +47,6 @@
         grid-template-columns: repeat(5, 1fr);
     }
 }
-
-body{
-    margin:0;
-    background:#222;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-#aquarium{
-    width:1000px;
-    height:500px;
-    position:relative;
-    overflow:hidden;
-
-    background-image:url("background/space-background.png");
-    background-size:cover;
-    background-position:center;
-    border:3px solid #333;
-}
-
-.fish{
-    position:absolute;
-    user-select:none;
-    pointer-events:none;
-}
-
-.bubble{
-    position:absolute;
-    bottom:-30px;
-
-    border-radius:50%;
-    background:rgba(255,255,255,0.6);
-
-    animation:rise linear forwards;
-}
-
-@keyframes rise{
-    from{
-        transform:translateY(0);
-        opacity:0;
-    }
-
-    20%{
-        opacity:1;
-    }
-
-    to{
-        transform:translateY(-550px);
-        opacity:0;
-    }
-}
-#drawButton {
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-    z-index: 10;
-
-    padding: 10px 16px;
-    border: 2px solid white;
-    border-radius: 20px;
-
-    background: #16a34a;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-</style>
-</head>
 
 <body>
 
@@ -386,7 +315,11 @@ setInterval(loadFish, 10000);
     <a href="https://sono-togoshi.github.io/web-space/">
         <span>🚀</span>うちゅう
     </a>
-    
+
+<a href="https://sono-togoshi.github.io/web-halloween/">
+    <span>🎃</span>はろうぃん
+</a>
+
     <a href="https://sono-togoshi.github.io/princess-kisekake/">
     <span>👗</span>きせかえ
 </a>
@@ -401,6 +334,7 @@ setInterval(loadFish, 10000);
         <span>🎨</span>かいが
     </a>
 </nav>
+
 
 
 </body>
